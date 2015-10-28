@@ -13,6 +13,14 @@ def test_getmulti():
     raw_input(["chocolate","vanilla","strawberry"])
     print (["Chocolate","Vanilla","Strawberry"])
 
-test_getmulti
-    
+test_getmulti()
+
+def test_restartgame():
+    raw_input("continue,exit")
+    print(["Continue","Exit"])
+    if "Exit": print(["GAME OVER"])
+    if "Continue": print("You may continue")
+   
+  
+test_restartgame()
     
