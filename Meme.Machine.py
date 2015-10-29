@@ -2,7 +2,8 @@ import random
 
 def get_multi (choices):
     # write code to actually do this here
-    raw_input ('')
+    raw_input (choices)
+    
     return '1'
 
 def get_random (choices):
@@ -46,10 +47,12 @@ def test_random():
 def test_getmulti():
     # this test should call get_multi...
     choices = ['1','2','3']
-    answer = get_multi(choices)
+    print 'TESTING get_multi with choices: ',choices
+    answer = get_multi(choices) 
     if answer in choices: print 'SUCCESS!'
     else: print 'FAILURE','returned:',answer,'not in',choices
     choices = ['red','yellow','blue']
+    print 'TESTING get_multi with choices: ',choices
     answer = get_multi(choices)
     if answer in choices: print 'SUCCESS!'
     else: print 'FAILURE','returned:',answer,'not in',choices
