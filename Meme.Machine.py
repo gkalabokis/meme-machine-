@@ -1,11 +1,19 @@
 import random
 
 def get_multi (choices):
-    # write code to actually do this here
-    raw_input (choices)
-    
-    return '1'
+    '''Ask the user to choose one of choices. Return user choice'''
+    print 'Here are your choices...'
+    raw_input()
+    for choice in choices:
+        print choice
+    answer = raw_input('Your choice')
+    if answer not in choices:
+        print answer,'Pick again skrub'
+        return get_multi(choices)
+    else:
+        return answer
 
+ 
 def get_random (choices):
     # write code to actually do what you want here...
     return answer
@@ -47,12 +55,10 @@ def test_random():
 def test_getmulti():
     # this test should call get_multi...
     choices = ['1','2','3']
-    print 'TESTING get_multi with choices: ',choices
-    answer = get_multi(choices) 
+    answer = get_multi(choices)
     if answer in choices: print 'SUCCESS!'
     else: print 'FAILURE','returned:',answer,'not in',choices
     choices = ['red','yellow','blue']
-    print 'TESTING get_multi with choices: ',choices
     answer = get_multi(choices)
     if answer in choices: print 'SUCCESS!'
     else: print 'FAILURE','returned:',answer,'not in',choices
