@@ -16,6 +16,9 @@ def get_multi (choices):
  
 def get_random (choices):
     # write code to actually do what you want here...
+    raw_input("1,2,3")
+    print (["1","2","3"])
+    answer = random.choice(choices)
     return answer
 
 def game_over ():
@@ -27,13 +30,14 @@ def play_game ():
     # WRITE YOUR ACTUAL GAME LOGIC HERE
     # USING get_multi, get_random, if statements, etc...
     # e.g.
-    food = get_multi(['Pizza','Burger','Salad'])
-    if food=='Pizza':
-        print 'Pizza is poison'
+    pepe = get_multi(['Pepe','Rare pepe','Legendary pepe'])
+    if pepe=='pepe':
+        print 'U looz skrub'
         game_over()
     else:
-        print 'Yum'
-        next = get_multi(['Go to sleep','Go to school']) # something like that...
+        print 'Whoa, 2spooky4me'
+        print 'Do you know the muffin man?'
+        next = get_multi(['Of course','']) # something like that...
         if next == 'Go to sleep':
             game_over()
         else:
@@ -44,11 +48,11 @@ def play_game ():
 
 def test_random():
     # this should call get_random...
-    raw_input("1,2,3")
-    print (["1","2","3"])
-    print random.choice(["regular pepe","rare pepe","legendary pepe"])
+    print 'Returns:',get_random(['1','2','3'])
+    print 'Returns:',get_random(['peanuts','cashews','walnuts'])
+    print 'Returns:',get_random(["regular pepe","rare pepe","legendary pepe"])
 
-#test_random()
+
 
 
 
@@ -65,7 +69,7 @@ def test_getmulti():
     #raw_input(["chocolate","vanilla","strawberry"])
     #print (["Chocolate","Vanilla","Strawberry"])
 
-test_getmulti()
+
 
 def test_restartgame():
     raw_input("continue,exit")
@@ -76,3 +80,4 @@ def test_restartgame():
   
 #test_restartgame()
 
+test_random()
